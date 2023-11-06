@@ -1,42 +1,34 @@
-# Content v2 Minimal Starter
+# Otaku Record
 
-Look at the [Content documentation](https://content.nuxt.com/) to learn more.
+Otaku Record is a personal blog website based on NuxtContent.
 
-## Setup
+- Bishoujo 美少女
+- Yuri 百合
+- Moe 萌
 
-Make sure to install the dependencies:
+## How to use it
 
-```bash
-# yarn
-yarn install
+recommend using `pnpm`
 
-# npm
-npm install
-
-# pnpm
-pnpm install
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
+Install
 
 ```bash
-npm run dev
+pnpm
 ```
 
-## Production
-
-Build the application for production:
+For development
 
 ```bash
-npm run build
+pnpm dev
 ```
 
-Locally preview production build:
+For deploy
 
 ```bash
-npm run preview
+pnpm generate
 ```
 
-Checkout the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## TODO
+
+- [ ] pagination
+- [ ] tags
