@@ -3,11 +3,11 @@ import { format } from 'date-fns'
 
 const route = useRoute()
 
-const { data } = await useAsyncData('page', () =>
+const { data } = await useAsyncData(`blog-${route.path}`, () =>
   queryContent(route.path).findOne()
 )
 
-const { data: surround } = await useAsyncData('blogs', () =>
+const { data: surround } = await useAsyncData(`surround-${route.path}`, () =>
   queryContent('blog').sort({ pubDate: -1 }).findSurround(data.value._path)
 )
 
