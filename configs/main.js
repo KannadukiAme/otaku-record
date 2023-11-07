@@ -7,12 +7,10 @@ export default {
     {
       name: 'HOME',
       href: '/',
-      active: '/',
     },
     {
       name: 'BLOG',
       href: '/blog/',
-      active: '/blog/',
     },
   ],
   pageSize: 5,

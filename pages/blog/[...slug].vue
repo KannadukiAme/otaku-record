@@ -7,7 +7,7 @@ const { data } = await useAsyncData('page', () =>
   queryContent(route.path).findOne()
 )
 
-const { data: surround } = await useAsyncData('navigation', () =>
+const { data: surround } = await useAsyncData('blogs', () =>
   queryContent('blog').sort({ pubDate: -1 }).findSurround(data.value._path)
 )
 
@@ -27,9 +27,9 @@ const [next, prev] = surround.value
           </h1>
           <div class="mt-4 flex gap-x-4 text-sm lg:text-base">
             <template v-for="tag in data.tags">
-              <a class="text-sora" :href="`/tags/${tag}`">
+              <NuxtLink class="text-sora" :to="`/tags/${tag}`">
                 {{ tag }}
-              </a>
+              </NuxtLink>
             </template>
             <div class="border-l border-gray-300 dark:border-gray-500"></div>
             <span class="text-gray-300 dark:text-gray-500">{{
@@ -44,30 +44,30 @@ const [next, prev] = surround.value
         </div>
         <div class="flex justify-between">
           <div class="w-1/2">
-            <a
+            <NuxtLink
               v-if="prev"
               class="text-xl inline-block px-6 py-3 hover:text-sora"
-              :href="prev._path"
+              :to="prev._path"
             >
               <Icon
                 class="w-8 h-8"
                 name="ic:sharp-keyboard-double-arrow-left"
               />
               <span class="ml-1">{{ prev.title }}</span>
-            </a>
+            </NuxtLink>
           </div>
           <div class="w-1/2 flex justify-end">
-            <a
+            <NuxtLink
               v-if="next"
               class="text-xl inline-block px-6 py-3 hover:text-sora"
-              :href="next._path"
+              :to="next._path"
             >
               <span class="mr-1">{{ next.title }}</span>
               <Icon
                 class="w-8 h-8"
                 name="ic:sharp-keyboard-double-arrow-right"
               />
-            </a>
+            </NuxtLink>
           </div>
         </div>
       </div>

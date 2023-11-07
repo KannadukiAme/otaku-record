@@ -21,11 +21,11 @@ useHead({
           <p class="text-3xl mb-2">{{ Config.title }}</p>
           <p class="text-gray-500 text-base mb-2 font-thin italic">
             Created By
-            <a
+            <NuxtLink
               class="hover:text-sora font-bold"
-              href="https://github.com/KannadukiAme"
+              to="https://github.com/KannadukiAme"
               target="_blank"
-              >@KannadukiAme</a
+              >@KannadukiAme</NuxtLink
             >
           </p>
           <p class="text-gray-500 text-base mb-8">

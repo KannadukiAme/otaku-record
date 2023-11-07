@@ -7,8 +7,6 @@ const onClick = () =>
   colorMode.value === 'light'
     ? (colorMode.preference = 'dark')
     : (colorMode.preference = 'light')
-
-const { path } = useRoute()
 </script>
 
 <template>
@@ -20,15 +18,14 @@ const { path } = useRoute()
     </div>
     <div class="flex px-2 py-2 space-x-6 items-center">
       <div class="flex space-x-6 text-gray-300">
-        <a
-          :class="`font-bold hover:text-sora ${
-            path === active ? 'text-sora' : ''
-          }`"
-          v-for="{ name, href, active } in Config.nav"
-          :href="href"
+        <NuxtLink
+          exactActiveClass="text-sora"
+          class="font-bold hover:text-sora"
+          v-for="{ name, href } in Config.nav"
+          :to="href"
         >
           <span>{{ name }}</span>
-        </a>
+        </NuxtLink>
       </div>
       <div
         class="flex space-x-6 text-gray-900 dark:text-gray-50 before:border-l before:mr-6"
@@ -43,9 +40,9 @@ const { path } = useRoute()
             </template>
           </ColorScheme>
         </button>
-        <a :href="Config.repoUrl" target="_blank">
+        <NuxtLink :to="Config.repoUrl" target="_blank">
           <Icon class="w-6 h-6" name="uil:github" />
-        </a>
+        </NuxtLink>
       </div>
     </div>
   </header>

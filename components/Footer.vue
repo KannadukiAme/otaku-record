@@ -8,14 +8,14 @@ import Config from '../configs/main'
   >
     <p>
       Powered by
-      <a
+      <NuxtLink
         class="font-bold hover:text-sora"
         target="_blank"
-        href="https://content.nuxt.com/"
+        to="https://content.nuxt.com/"
       >
         <Icon class="w-5 h-5" name="logos:nuxt-icon" />
         <span class="ml-1">NuxtContent</span>
-      </a>
+      </NuxtLink>
     </p>
     <p>{{ Config.footer.copyright }}</p>
   </footer>
