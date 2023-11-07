@@ -33,4 +33,4 @@ pnpm generate
 ## TODO
 
 - [ ] pagination
-- [ ] tags
+- [x] tags
