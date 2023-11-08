@@ -34,3 +34,4 @@ pnpm generate
 
 - [ ] pagination
 - [x] tags
+- [x] toc
