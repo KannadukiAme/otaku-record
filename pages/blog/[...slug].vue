@@ -37,8 +37,10 @@ const [next, prev] = surround.value
             }}</span>
           </div>
           <div
-            class="mt-8 md:flex-shrink prose marker:text-sora max-w-none hover:prose-a:text-sora prose-a:no-underline prose-li dark:prose-invert lg:prose-xl"
+            class="mt-8 md:flex-shrink prose marker:text-sora max-w-none hover:prose-a:text-sora prose-a:no-underline dark:prose-invert lg:prose-xl"
           >
+            <h2>目录</h2>
+            <TableOfContents :toc="data.body.toc.links" />
             <ContentDoc />
           </div>
         </div>

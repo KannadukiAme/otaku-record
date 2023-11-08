@@ -11,6 +11,11 @@ export default defineNuxtConfig({
     classSuffix: '',
   },
   content: {
+    markdown: {
+      anchorLinks: {
+        depth: 0,
+      },
+    },
     navigation: {
       fields: ['pubDate', 'heroImage', 'description', 'tags'],
     },
