@@ -12,6 +12,10 @@ export default {
       name: 'BLOG',
       href: '/blog/',
     },
+    {
+      name: 'ANISONG',
+      href: '/anisong/',
+    },
   ],
   pageSize: 5,
   footer: {
